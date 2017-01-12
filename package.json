@@ -1,0 +1,13 @@
+{
+  "name": "tt",
+  "version": "0.1.0",
+  "dependencies": {
+    "form-data": "^2.1.2",
+    "micro": "latest",
+    "mustache": "^2.3.0",
+    "node-fetch": "^1.6.3"
+  },
+  "scripts": {
+    "start": "node --harmony-async-await index"
+  }
+}
