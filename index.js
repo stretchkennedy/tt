@@ -20,16 +20,16 @@ html {
 body {
   min-height: 100%;
   color: #333;
-  font-size: 1.4rem;
+  font-size: 8vmin;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
   margin: 0;
   padding: 0;
 }
 
 input[type="number"], button {
-  font-size: 1.4rem;
+  font-size: 8vmin;
 }
 
 input {
@@ -39,13 +39,8 @@ input {
 
 form {
   display: flex;
-}
-
-.content {
-  max-width: 400px;
-  min-width: 300px;
-  flex-shrink: 1;
-  overflow: auto;
+  padding: 8vmin;
+  padding-bottom: 0;
 }
 
 .trams {
@@ -54,8 +49,9 @@ form {
 }
 
 .trams ul {
+  padding-left: 8vmin;
   list-style: none;
-  flex: 1 1;
+  flex: 2 1;
 }
 
 .trams svg path {
@@ -63,9 +59,13 @@ form {
 }
 
 .trams a {
-  padding-right: 40px;
-  width: 65px;
-  height: 65px;
+  padding-right: 8vmin;
+  flex: 1 1;
+  display: flex;
+}
+
+.trams a svg {
+  flex: 1 1;
 }
 
 </style>
@@ -92,7 +92,6 @@ const TRAMS_TEMPLATE = `
 ${HEAD_TEMPLATE}
 </head>
 <body>
-<div class="content">
 ${FORM_TEMPLATE}
 <div class="trams">
 <ul>
@@ -101,9 +100,8 @@ ${FORM_TEMPLATE}
 {{/trams}}
 </ul>
 <a href="/{{id}}">
-<svg width="65px" height="65px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M25.4 4.3c0 0-1.3 1.3-2.2 2.2C18.5 3.1 11.9 3.5 7.7 7.7c-2.5 2.5-3.6 5.7-3.5 9h4C8.1 14.5 8.8 12.2 10.5 10.5c2.7-2.7 6.7-3 9.8-1.2-1 1-2.2 2.2-2.2 2.2-0.8 1 0.1 1.6 0.6 1.6l5.6 0c0.3 0 0.5 0 0.5 0s0.2 0 0.5 0h1.1c0.3 0 0.5-0.2 0.5-0.5V4.9C27 4.2 26.2 3.5 25.4 4.3z"/><path d="M6.6 27.7c0 0 1.3-1.3 2.2-2.2 4.7 3.4 11.3 3 15.5-1.2 2.5-2.5 3.6-5.7 3.5-9h-4c0.1 2.2-0.6 4.5-2.3 6.2-2.7 2.7-6.7 3-9.8 1.2 1-1 2.2-2.2 2.2-2.2 0.8-1-0.1-1.6-0.6-1.6l-5.6 0c-0.3 0-0.5 0-0.5 0s-0.2 0-0.5 0H5.6c-0.3 0-0.5 0.2-0.5 0.5v7.7C5 27.8 5.8 28.5 6.6 27.7z"/></svg>
+<svg width="100%" height="100%" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M25.4 4.3c0 0-1.3 1.3-2.2 2.2C18.5 3.1 11.9 3.5 7.7 7.7c-2.5 2.5-3.6 5.7-3.5 9h4C8.1 14.5 8.8 12.2 10.5 10.5c2.7-2.7 6.7-3 9.8-1.2-1 1-2.2 2.2-2.2 2.2-0.8 1 0.1 1.6 0.6 1.6l5.6 0c0.3 0 0.5 0 0.5 0s0.2 0 0.5 0h1.1c0.3 0 0.5-0.2 0.5-0.5V4.9C27 4.2 26.2 3.5 25.4 4.3z"/><path d="M6.6 27.7c0 0 1.3-1.3 2.2-2.2 4.7 3.4 11.3 3 15.5-1.2 2.5-2.5 3.6-5.7 3.5-9h-4c0.1 2.2-0.6 4.5-2.3 6.2-2.7 2.7-6.7 3-9.8 1.2 1-1 2.2-2.2 2.2-2.2 0.8-1-0.1-1.6-0.6-1.6l-5.6 0c-0.3 0-0.5 0-0.5 0s-0.2 0-0.5 0H5.6c-0.3 0-0.5 0.2-0.5 0.5v7.7C5 27.8 5.8 28.5 6.6 27.7z"/></svg>
 </a>
-</div>
 </div>
 </body>
 </html>
