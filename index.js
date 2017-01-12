@@ -10,7 +10,8 @@ const FORM_TEMPLATE = `
 </form>
 `;
 
-const STYLES_TEMPLATE  = `
+const HEAD_TEMPLATE  = `
+<meta charset="utf-8" />
 <style type="text/css">
 html {
   height: 100%;
@@ -23,6 +24,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 input[type="number"], button {
@@ -40,6 +43,7 @@ form {
 
 .content {
   max-width: 400px;
+  min-width: 300px;
   flex-shrink: 1;
   overflow: auto;
 }
@@ -70,8 +74,10 @@ form {
 const ROOT_TEMPLATE = `
 <!doctype html>
 <html>
-<head><title>tt</title></head>
-${STYLES_TEMPLATE}
+<head>
+<title>tt</title>
+${HEAD_TEMPLATE}
+</head>
 <body>
 ${FORM_TEMPLATE}
 </body>
@@ -81,8 +87,10 @@ ${FORM_TEMPLATE}
 const TRAMS_TEMPLATE = `
 <!doctype html>
 <html>
-<head><title>route {{id}} - tt</title></head>
-${STYLES_TEMPLATE}
+<head>
+<title>route {{id}} - tt</title>
+${HEAD_TEMPLATE}
+</head>
 <body>
 <div class="content">
 ${FORM_TEMPLATE}
